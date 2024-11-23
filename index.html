@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="سياسة الخصوصية لشركة البرمجة الخاصة بنا.">
+  <title>سياسة الخصوصية</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #007bff;
+    }
+    .lang-switch {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .lang-switch a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .lang-switch a:hover {
+      text-decoration: underline;
+    }
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      z-index: 1000;
+    }
+    .cookie-banner button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .cookie-banner button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="#ar">العربية</a> | <a href="#en">English</a>
+    </div>
+
+    <!-- Arabic Version -->
+    <section id="ar">
+      <h1>سياسة الخصوصية</h1>
+      <p>نشكركم على ثقتكم في ميتا سوفت وير. نحن ملتزمون بحماية خصوصيتكم وضمان أمان بياناتكم. توضح هذه السياسة كيفية جمع المعلومات الشخصية واستخدامها ومشاركتها عند استخدام خدماتنا.</p>
+
+      <h2>1. جمع المعلومات</h2>
+      <p>نقوم بجمع المعلومات التي تقدمها طواعية عند التسجيل في خدماتنا أو التواصل معنا. تشمل هذه المعلومات الاسم، البريد الإلكتروني، ورقم الهاتف.</p>
+
+      <h2>2. استخدام المعلومات</h2>
+      <p>نستخدم المعلومات التي نجمعها لتقديم الخدمات، تحسين تجربة المستخدم، والتواصل معكم بخصوص التحديثات والعروض الخاصة.</p>
+
+      <h2>3. مشاركة المعلومات</h2>
+      <p>نحن لا نشارك معلوماتكم الشخصية مع أطراف ثالثة إلا عند الضرورة لتقديم الخدمة أو الامتثال للمتطلبات القانونية.</p>
+
+      <h2>4. أمان البيانات</h2>
+      <p>نتخذ التدابير المناسبة لحماية بياناتكم من الوصول غير المصرح به أو التغيير أو الكشف.</p>
+
+      <h2>5. حقوقكم</h2>
+      <p>يمكنكم طلب الوصول إلى بياناتكم الشخصية أو تحديثها أو حذفها عن طريق التواصل معنا.</p>
+
+      <p>إذا كان لديكم أي استفسارات حول هذه السياسة، يرجى <a href="#">الاتصال بنا</a>.</p>
+      <div class="cookie-banner" id="cookie-banner">
+        <span>نحن نستخدم ملفات تعريف الارتباط لتحسين تجربتك. بمتابعتك لتصفح الموقع، فإنك توافق على استخدامنا لها.</span>
+        <button id="accept-cookies">أوافق</button>
+        <button id="reject-cookies">أرفض</button>
+      </div>
+    
+    </section>
+
+    <hr>
+
+    <!-- English Version -->
+    <section id="en">
+      <h1>Privacy Policy</h1>
+      <p>Thank you for trusting our Meta Software. We are committed to protecting your privacy and ensuring the security of your data. This policy explains how we collect, use, and share personal information when you use our services.</p>
+
+      <h2>1. Information Collection</h2>
+      <p>We collect information that you voluntarily provide when registering for our services or contacting us. This includes your name, email address, and phone number.</p>
+
+      <h2>2. Information Use</h2>
+      <p>We use the information we collect to deliver services, improve user experience, and communicate with you about updates and special offers.</p>
+
+      <h2>3. Information Sharing</h2>
+      <p>We do not share your personal information with third parties except when necessary to provide the service or comply with legal requirements.</p>
+
+      <h2>4. Data Security</h2>
+      <p>We take appropriate measures to protect your data from unauthorized access, alteration, or disclosure.</p>
+
+      <h2>5. Your Rights</h2>
+      <p>You can request access to, update, or delete your personal data by contacting us.</p>
+
+      <p>If you have any questions about this policy, please <a href="#">contact us</a>.</p>
+    </section>
+     
+</div>
+<script>
+    // شريط ملفات تعريف الارتباط
+    document.addEventListener("DOMContentLoaded", () => {
+      const cookieBanner = document.getElementById("cookie-banner");
+      const acceptCookies = document.getElementById("accept-cookies");
+      const rejectCookies = document.getElementById("reject-cookies");
+
+      // إظهار الشريط إذا لم يتم اتخاذ قرار
+      if (!localStorage.getItem("cookiesAccepted")) {
+        cookieBanner.style.display = "block";
+      }
+
+      // قبول ملفات تعريف الارتباط
+      acceptCookies.addEventListener("click", () => {
+        localStorage.setItem("cookiesAccepted", "true");
+        cookieBanner.style.display = "none";
+      });
+
+      // رفض ملفات تعريف الارتباط
+      rejectCookies.addEventListener("click", () => {
+        localStorage.setItem("cookiesAccepted", "false");
+        cookieBanner.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>
